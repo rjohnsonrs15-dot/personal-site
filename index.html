@@ -256,8 +256,26 @@
 
     .hero-right {
       display: grid;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: auto repeat(2, 1fr);
       gap: 20px;
+    }
+
+    .hero-image {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 210px;
+      background: rgba(10, 30, 42, 0.78);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 210px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.05) contrast(1.05);
     }
 
     .insight {
@@ -687,6 +705,9 @@
       </article>
 
       <aside class="hero-right">
+        <div class="hero-image">
+          <img src="https://picsum.photos/900/620?blur=0" alt="Generic scenic hero image" loading="eager" />
+        </div>
         <div class="insight">
           <h3>Market Focus</h3>
           <div class="value">2021 - Present</div>
